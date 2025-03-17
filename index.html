@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maybe Instagram</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!--navigation bar at top of website-->
+  <nav class="navbar navbar-toggler bg-light col-sm-12 col-xl-12 mx-auto">
+    <div class="container-fluid justify-content-sm-between"> <!--the logo and 'brand' name -- only child under nav-->
+      <!--first grandchild, only contains brand and icon-->
+      <div class="d-flex justify-content-sm-start justify-content-xl-start">
+        <!--brand and icon in same line, starts on the left, 1 space between text and icon-->
+        <a class="navbar-brand d-flex gap-1 ">
+          <i class="fa-brands fa-instagram fs-4"></i> <!--font awesome link-->
+          <span>Instagram</span> <!--"Website name"-->
+        </a>
+      </div>
+
+      <!--second grandchild, needed to justify content between to put icon/brand on left side and post button/menu on right side-->
+      <div class="d-flex gap-1">
+        <!--first great grandchild, post button, it will allow create post and gears menu to be on same line-->
+        <div class="gap-1 d-flex justify-content-sm-end justify-content-xl-end">
+          <!--Create new post button-->
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span>Create New Post</span>
+          </button>
+        </div>
+
+        <!--second great grandchild, gears menu button-->
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa-solid fa-gears"></i> <!--font awesome link-->
+          </button>
+          <!--drop down options when gears is toggled-->
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li><a class="dropdown-item link-danger" href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!--modal needs to be sibling of navbar-->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <strong>Caption:</strong>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+            placeholder="Add the caption of your post here"></textarea>
+          <div class="py-3">
+            <button class="rounded btn-outline-dark btn-sm">
+              <i class="fa-solid fa-camera"></i>
+            </button>
+            <button class="rounded btn-outline-dark btn-sm mx-2">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--to make complete row with just toggle buttons to switch between views-->
+  <div class="row">
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+          type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+          <i class="fa-solid fa-table-cells"></i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+          type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active w-30 h-30" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+        tabindex="0">
+        <!--grid view-->
+        <div class="container mx-auto p-1">
+          <div class="grid gap-1 d-flex justify-content-sm-between justify-content-xl-between" style="object-fit: cover;">
+            <div class="col"> <!--row 1-->
+              <img
+                src="https://media.architecturaldigest.com/photos/584b444546458b735ce192ea/master/w_1600%2Cc_limit/northern-lights-07.jpg"
+                class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="northern lights"> <!--row 1 column 1-->
+            </div>
+            <div class="col">
+              <img src="https://cdn.5280.com/2017/06/Hot-Springs_Larry-Pierce-Steamboat-Ski-Resort.jpg"
+                class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="hot springs"> <!--r1. c2-->
+            </div>
+            <div class="col">
+              <img src="https://www.gi.alaska.edu/sites/default/files/portfolio/1657pic.jpg"
+                class= "img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="creek"> <!--r1. c3-->
+            </div>
+          </div>
+          <div class="grid gap-1 d-flex justify-content-sm-between justify-content-xl-between" style="object-fit: cover;">
+            <div class="col"> <!--r2-->
+              <img src="https://a-us.storyblok.com/f/1005231/6d477f41e5/shutterstock_dog-sledding_shore-excursion_18701060.jpg"
+              class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="dog sledding"> <!--r2.c1-->
+            </div>
+            <div class="col">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1420443563945-Z7V6RRRAGCY5C0NFF32I/image-asset.jpeg"
+                class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="waterfall"><!--r2.c.2-->
+            </div>
+            <div class="col">
+              <img
+                src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652339805/EducationHub/photos/grand-canyon.jpg"
+                class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="canyon"><!--r2.c3-->
+            </div>
+          </div>
+          <div class="grid gap-1 d-flex justify-content-sm-between justify-content-xl-between" style="object-fit: cover;">
+            <div class="col"> <!--r3-->
+              <img src="https://media.timeout.com/images/106041640/750/562/image.jpg"
+              class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="mountains again"><!--r3.c1-->
+            </div>
+            <div class="col">
+              <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/46/e6/24.jpg"
+              class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="cenotes"> <!--r3.c2-->
+            </div>
+            <div class="col">
+              <img src="https://georgiacfy.com/wp-content/uploads/2021/06/shutterstock_787221445-1.jpg"
+              class="img-fluid w-100 p-1" style="height: 200px; object-fit: fill;" alt="ziplining"><!--r3.c3-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade justify-content-evenly" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+        tabindex="0">
+        <!--card view-->
+        <div class="v-stack gap-3">
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 1-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Northern Lights</h5>
+              <p>12/31</p>
+            </div>
+            <img
+              src="https://media.architecturaldigest.com/photos/584b444546458b735ce192ea/master/w_1600%2Cc_limit/northern-lights-07.jpg"
+              class="card-img-top mx-auto rounded d-block" alt="northern lights">
+            <div class="card-body">
+              <p><strong>205 likes</strong></p>
+              <p class="card-text"> 
+                An aurora, also commonly known as the northern lights (aurora borealis) or southern lights (aurora australis), is a natural light display in Earth's sky, predominantly seen in high-latitude regions (around the Arctic and Antarctic)
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 2-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Hot springs</h5>
+              <p>01/05</p>
+            </div>
+            <img src="https://cdn.5280.com/2017/06/Hot-Springs_Larry-Pierce-Steamboat-Ski-Resort.jpg"
+                class="img-fluid rounded mx-auto d-block" alt="hot springs">
+            <div class="card-body">
+              <p><strong>225 likes</strong></p>
+              <p class="card-text">A hot spring, hydrothermal spring, or geothermal spring is a spring produced by the emergence of geothermally heated groundwater onto the surface of the Earth. 
+
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 3-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Dog Sledding</h5>
+              <p>02/14</p>
+            </div>
+            <img src="https://a-us.storyblok.com/f/1005231/6d477f41e5/shutterstock_dog-sledding_shore-excursion_18701060.jpg"
+              class="img-fluid rounded mx-auto d-block" alt="dog sledding">
+            <div class="card-body">
+              <p><strong>315 likes</strong></p>
+              <p class="card-text">Dog power has been used for hunting and traveling for over a thousand years. As far back as the 10th century CE these dogs have contributed to human culture.
+              </p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 4-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Creek</h5>
+              <p>04/20</p>
+            </div>
+            <img src="https://www.gi.alaska.edu/sites/default/files/portfolio/1657pic.jpg"
+                class="img-fluid rounded mx-auto d-block" alt="creek">
+            <div class="card-body">
+              <p><strong>256 likes</strong></p>
+              <p class="card-text">A creek in North America and elsewhere, such as Australia, is a stream that is usually smaller than a river. In the British Isles it is a small tidal inlet.</p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 5-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Waterfall</h5>
+              <p>05/05</p>
+            </div>
+            <img
+                src="https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1420443563945-Z7V6RRRAGCY5C0NFF32I/image-asset.jpeg"
+                class="img-fluid rounded mx-auto d-block" alt="waterfall">
+            <div class="card-body">
+              <p><strong>514 likes</strong></p>
+              <p class="card-text">A waterfall is any point in a river or stream where water flows over a vertical drop or a series of steep drops.</p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 6-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Canyons</h5>
+              <p>07/04</p>
+            </div>
+            <img
+                src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652339805/EducationHub/photos/grand-canyon.jpg"
+                class="img-fluid rounded mx-auto d-block" alt="canyon">
+            <div class="card-body">
+              <p><strong>325 likes</strong></p>
+              <p class="card-text">A canyon, gorge or chasm, is a deep cleft between escarpments or cliffs resulting from weathering and the erosive activity of a river over geologic time scales.</p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 7-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Mountains</h5>
+              <p>08/21</p>
+            </div>
+            <img src="https://media.timeout.com/images/106041640/750/562/image.jpg"
+                class="img-fluid rounded mx-auto d-block" alt="mountains">
+            <div class="card-body">
+              <p><strong>332 likes</strong></p>
+              <p class="card-text">A mountain is an elevated portion of the Earth's crust, generally with steep sides that show significant exposed bedrock.</p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 8-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Cenotes</h5>
+              <p>10/31</p>
+            </div>
+            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/46/e6/24.jpg"
+                class="img-fluid rounded mx-auto d-block" alt="cenotes">
+            <div class="card-body">
+              <p><strong>295 likes</strong></p>
+              <p class="card-text">A cenote is a natural pit, or sinkhole, resulting when a collapse of limestone bedrock exposes groundwater. </p>
+            </div>
+          </div>
+          <div class="card mx-auto p-2" style="width: 40%;"> <!--card 9-->
+            <div class="card-header d-flex justify-content-sm-between">
+              <h5>Ziplining</h5>
+              <p>11/15</p>
+            </div>
+            <img src="https://georgiacfy.com/wp-content/uploads/2021/06/shutterstock_787221445-1.jpg"
+                class="img-fluid rounded mx-auto d-block" alt="ziplining">
+            <div class="card-body">
+              <p><strong>425 likes</strong></p>
+              <p class="card-text">A zip-line is designed to enable cargo or a person propelled by gravity to travel from the top to the bottom of the inclined cable by holding on to, or being attached to, the freely moving pulley.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
